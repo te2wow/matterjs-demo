@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matter.js デモ</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .demo-area {
+            flex: 1;
+            position: relative;
+        }
+        .canvas-container {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: left;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Matter.js デモ</h2>
+            <button id="basic">基本物理演算</button>
+            <button id="gravity">重力方向変換</button>
+            <button id="gravity-strength">重力強度変換</button>
+            <button id="constraints">接続と制約</button>
+            <button id="car">自動車シミュレーション</button>
+            <button id="stack">積み木崩し</button>
+            <button id="pyramid">ピラミッド構造</button>
+            <button id="newton-cradle">ニュートンのゆりかご</button>
+            <button id="ragdoll">ラグドール</button>
+        </div>
+        <div class="demo-area">
+            <div class="canvas-container">
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/matter-js/build/matter.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html> 
